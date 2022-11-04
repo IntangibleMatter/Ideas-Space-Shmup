@@ -6,12 +6,20 @@
 emission_shape = 2
 emission_box_extents = Vector3( 203, 1, 1 )
 flag_disable_z = true
-gravity = Vector3( 0, 98, 0 )
+direction = Vector3( 0, 1, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 50.0
+initial_velocity_random = 0.49
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
+scale = 0.5
+scale_random = 0.89
 
 [node name="Stars" type="Particles2D"]
-amount = 500
+z_index = -10
+amount = 100
 lifetime = 60.0
+preprocess = 60.0
 process_material = SubResource( 1 )
 texture = ExtResource( 1 )
